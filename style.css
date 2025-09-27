@@ -83,6 +83,22 @@ h1{
     }
 }
 
+/* Makes the sidebars appear on the bottom for phones */
+@media (max-width: 768px) {
+    .side-stripe {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        background-color: rgba(0,0,0,0.8);
+        padding: 10px 0;
+        border-radius: 0;
+    }
+}
+
 
 
 
