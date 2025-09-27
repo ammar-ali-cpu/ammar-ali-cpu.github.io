@@ -1,18 +1,78 @@
 body{
     background-color: rgb(14, 18, 40);
     color: white;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     position: relative;
     min-height: 100vh;
     padding-left: 80px;
     padding-right: 80px;
 }
 
-h1{
+h1, h2{
     font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+    opacity: 0.7;
+}
+
+.top-nav {
+    position: fixed;           /* sticks to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(14,18,40);
+    padding: 15px 40px;
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.3); */
+    z-index: 10;               /* above sidebars and content */
+    transition: top 0.3s; /* smooth hide/show */
+
+}
+
+.top-nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-nav .logo img {
+    height: 40px;  /* adjust to fit navbar */
+    width: auto;   /* keep proportions */
+    display: block;
+}
+
+.top-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.top-nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.top-nav .nav-links a:hover {
+    color: #0a84ff;
+}
+
+/* Add top padding to container so content isn't hidden behind navbar */
+.container {
+    padding-top: 80px;  /* adjust based on navbar height */
+}
+
+.main-content-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 60px; /* space for top nav */
+}
 
 .container {
     width: 80%;            /* large central column */
@@ -108,6 +168,10 @@ h1{
 
     .side-stripe a {
         color: white;              /* ensure icons stay white */
+    }
+
+    .top-nav .nav-links {
+        display: none; /* hide links on small screens */
     }
 }
 

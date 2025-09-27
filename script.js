@@ -20,3 +20,23 @@ document.addEventListener('mouseenter', () => {
 document.addEventListener('mouseleave', () => {
     cursorGlow.style.opacity = '0';
 });
+
+
+
+// For nav bar
+let lastScrollTop = 0;
+const navbar = document.querySelector('.top-nav');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if(scrollTop > lastScrollTop){
+        // Scrolling down
+        navbar.style.top = '-100px'; // hide navbar
+    } else {
+        // Scrolling up
+        navbar.style.top = '0'; // show navbar
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // for Mobile or negative scrolling
+});
