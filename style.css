@@ -72,36 +72,30 @@ h1{
     color: #0a84ff;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for phone view */
 @media (max-width: 768px) {
     .container {
         width: 95%;
         padding: 20px;
     }
-    .side-stripe {
-        display: none; /* hide stripes on small screens to save space */
-    }
-}
 
-/* Makes the sidebars appear on the bottom for phones */
-@media (max-width: 768px) {
+    /* Keep both sidebars visible */
     .side-stripe {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        background-color: rgba(0,0,0,0.8);
-        padding: 10px 0;
+        flex-direction: row;       /* horizontal layout */
+        bottom: 0;                 /* stick to bottom */
+        padding: 10px 20px;        /* optional horizontal padding */
         border-radius: 0;
+        background-color: rgba(14,18,40,0.95);
+        gap: 15px;
+    }
+
+    /* Position each stripe separately on left/right */
+    .side-stripe.left { left: 10px; right: auto; justify-content: flex-start; }
+    .side-stripe.right { right: 10px; left: auto; justify-content: flex-end; }
+
+    .side-stripe a {
+        color: white;              /* ensure icons stay white */
     }
 }
-
-
-
-
-
 
 
