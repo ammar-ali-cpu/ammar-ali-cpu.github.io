@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(14, 18, 40);
+    color: white;
+    margin: 20px 20px 20px 20px;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;    
+  height: 700px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(100, 150, 255, 0.008) 0%,
+    rgba(100, 150, 255, 0.0075) 5%,
+    rgba(100, 150, 255, 0.007) 10%,
+    rgba(100, 150, 255, 0.0065) 15%,
+    rgba(100, 150, 255, 0.006) 20%,
+    rgba(100, 150, 255, 0.0055) 25%,
+    rgba(100, 150, 255, 0.005) 30%,
+    rgba(100, 150, 255, 0.0045) 40%,
+    rgba(100, 150, 255, 0.004) 50%,
+    rgba(100, 150, 255, 0.0035) 60%,
+    rgba(100, 150, 255, 0.003) 70%,
+    rgba(100, 150, 255, 0.0025) 80%,
+    rgba(100, 150, 255, 0.002) 90%,
+    transparent 100%
+  );
+} */
+
+/* .cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;    
+  height: 700px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(100, 150, 255, 0.008) 0%,           
+    rgba(100, 150, 255, 0.006) 20%,
+    rgba(14, 18, 40, 0.002) 60%,              
+    rgba(14, 18, 40, 0) 100%                
+  );
+} */
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(
+        circle,
+        rgba(100, 150, 255, 0.08) 0%,
+        rgba(100, 150, 255, 0.04) 25%,
+        rgba(100, 150, 255, 0.015) 50%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
