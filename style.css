@@ -5,6 +5,8 @@ body{
     justify-content: center;
     position: relative;
     min-height: 100vh;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
 h1{
@@ -70,6 +72,17 @@ h1{
 .side-stripe a:hover {
     transform: scale(1.2);
     color: #0a84ff;
+}
+
+/* Add a line under the icons */
+.side-stripe::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;                  /* thickness of the line */
+    background-color: #0a84ff;    /* line color, can match hover */
+    margin-top: 10px;             /* spacing from the icons */
+    border-radius: 1px;
 }
 
 /* Responsive adjustments for phone view */
