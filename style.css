@@ -7,11 +7,25 @@ body{
     min-height: 100vh;
     padding-left: 80px;
     padding-right: 80px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 60px;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 1000ms ease-out forwards;
+}
+
+h1{ --final-opacity: 1; }
+h2{ --final-opacity: 0.7; }
+
+@keyframes fadeUp {
+  to {
+    opacity: var(--final-opacity, 1);
+    transform: translateY(0);
+  }
 }
 
 h1{
