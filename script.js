@@ -40,3 +40,50 @@ window.addEventListener('scroll', function() {
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // for Mobile or negative scrolling
 });
+
+
+// For mobile drawer menu
+(function () {
+    const nav = document.querySelector('.top-nav');
+    const btn = nav.querySelector('.hamburger');
+    const drawer = nav.querySelector('.mobile-drawer');
+    const scrim = nav.querySelector('.scrim');
+    const closeBtn = nav.querySelector('.drawer-close');
+
+    function openMenu() {
+      // 1) unhide so it can animate from its initial transform
+      drawer.hidden = false;
+      scrim.hidden = false;
+
+      // 2) wait one frame, then apply the "open" class to trigger transition
+      requestAnimationFrame(() => {
+        nav.classList.add('menu-open');
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    function closeMenu() {
+      // remove the open class to start the slide-out
+      nav.classList.remove('menu-open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      // Hiding will now be handled by 'transitionend'
+    }
+
+    // Hide after the transform transition finishes
+    drawer.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'transform' && !nav.classList.contains('menu-open')) {
+        drawer.hidden = true;
+        scrim.hidden = true;
+      }
+    });
+
+    btn.addEventListener('click', () =>
+      btn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu()
+    );
+    scrim.addEventListener('click', closeMenu);
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    drawer.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+  })();
