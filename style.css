@@ -146,6 +146,8 @@ h2{
     position: relative;
     min-height: 100vh;
     padding-top: 60px; /* space for top nav */
+    max-width: 80%;
+    margin: auto;
 }
 
 .container {
@@ -229,6 +231,10 @@ h2{
     .container {
         width: 95%;
         padding: 20px;
+    }
+
+    .main-content-wrapper{
+        max-width: none;
     }
 
     /* Keep both sidebars visible */
