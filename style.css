@@ -386,6 +386,22 @@ h2{
     h1, h2{
         font-size: 36px; /* smaller headings */
     }
+
+    #about .about-elements{
+        flex-direction:column; 
+        align-items:flex-start; 
+    }
+
+    .about-pic{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about .about-text{
+        text-align: center;
+        max-width: 36ch;       /* optional: nicer measure on small screens */
+    }
+    :root{ --size: 300px; }
 }
 
 
