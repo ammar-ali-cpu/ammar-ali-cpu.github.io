@@ -258,7 +258,85 @@ h2{
     margin-top: 600px;
 }
 
+/* Layout */
+#about .about-elements {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* space between avatar and text */
+}
 
+/* Tweak this variable to change the avatar background color/tint */
+:root {
+  --size: 400px;                 /* image size */
+  --radius: 0px;                 /* 0 = perfectly square; bump to 8px for soft corners */
+  --border-color: rgb(122, 163, 255);       /* outline color */
+  --border-width: 3px;           /* outline thickness */
+
+  /* how much the outline peeks by default (negative = up/left, positive = down/right) */
+  --peek-x: -10px;
+  --peek-y: -10px;
+
+  /* where the outline moves on hover (further in same direction) */
+  --hover-peek-x: -18px;
+  --hover-peek-y: -18px;
+
+  --shadow: 0 8px 20px rgba(122, 163, 255, 0.35);
+  --shadow-hover: 0 12px 28px rgba(0,0,0,0.18);
+  --blue-tone: sepia(1) saturate(200%) hue-rotate(185deg) brightness(0.7) contrast(0.85);
+
+}
+
+/* Avatar sizing */
+.about-pic {
+  position:relative;
+  width:var(--size);
+  height:var(--size);
+  margin:0;
+  flex:0 0 auto;
+  cursor:default;
+}
+
+/* Circular background behind the image */
+.about-pic::before {
+  content:"";
+  position:absolute;
+  inset:0;                        /* same size as the image */
+  border-radius:var(--radius);
+  border: var(--border-width) solid var(--border-color);
+  background: transparent;        /* ensure no fill */
+  transform: translate(var(--peek-x), var(--peek-y));
+  transition: transform 220ms ease;
+  pointer-events:none;
+}
+
+/* The photo itself */
+.about-pic img {
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow: var(--shadow);
+
+  /* ↓ Blue tone before hover */
+  filter: var(--blue-tone);
+
+  /* slight counter-shift to emphasize the peek (optional) */
+  transform: translate(2px, 2px);
+  transition: transform 220ms ease, filter 220ms ease, box-shadow 220ms ease;
+}
+
+/* Hover: background shifts up-left, photo shifts down-right + slight tint */
+.about-pic:hover::before {
+  transform: translate(var(--hover-peek-x), var(--hover-peek-y));
+}
+.about-pic:hover img {
+  transform: translate(0,0);
+  filter: none;                  /* back to natural colors */
+  box-shadow: var(--shadow-hover);
+}
 
 
 
