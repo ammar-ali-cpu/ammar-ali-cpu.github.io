@@ -14,7 +14,8 @@
 <body>
     <nav class="top-nav">
         <div class="nav-container">
-            <div class="logo" onclick="window.location.reload()">
+            <!-- <div class="logo" onclick="window.location.reload()"> -->
+            <div class="logo" onclick="location.replace(location.origin + location.pathname)">
                 <img src="assets/AA.png" alt="AA">
             </div>
 
@@ -50,7 +51,7 @@
         <div class="side-stripe left">
             <a href="https://www.linkedin.com/in/ammar-ali-3b4388284/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/ammar-ali-cpu" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fa-solid fa-globe"></i></a> <!--add VIP team website-->
+            <a href="https://www.stonybrook.edu/commcms/est-original/dtsResearch/automotive-ethics/" target="_blank"><i class="fa-solid fa-globe"></i></a> <!--add VIP team website-->
             <!-- <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a> -->
         </div>
 
@@ -61,7 +62,7 @@
             </header>
 
             <main>
-                <p>Hello! I'm currently a Computer Science student at Stony Brook University</p>
+                <p>Hello! I'm a final year Computer Science student at Stony Brook University specializing in Data Science and Artificial Intelligence. Actively seeking employment opportunities!</p>
             </main>
 
             <div class ="section" id="about">
@@ -70,26 +71,68 @@
                         <img src="assets/AmmarSuit2023.png" alt="Ammar Ali">
                     </figure>
                     <div class="about-text">
-                        <h4>About Me</h4>
+                        <h3>About Me</h3>
                         <p>I am a dedicated and passionate computer science student with a strong interest in software development and technology. I enjoy solving complex problems and continuously learning new skills to enhance my expertise in the field.</p>
                     </div>
                 </div>
             </div>
 
             <div class="section" id="experience">
-                <h4>Experience</h4>
-                <h5>Internship at Tech Solutions</h5>
-                <p>Worked on developing web applications using JavaScript and React. Collaborated with a team to design and implement new features, improving user experience.</p>
+                <h3 class="exp-title">Experience</h3>
+                <div class="exp-grid" data-exp>
+                    <!-- LEFT: company tabs -->
+                    <div class="exp-tabs" role="tablist" aria-label="Companies">
+                        <div class="exp-rail"><div class="exp-indicator" id="exp-indicator"></div></div>
+                            <button role="tab" aria-selected="true" id="exp-tab-1" aria-controls="exp-panel-1">Automotive Ethics</button>
+                            <button role="tab" aria-selected="false" id="exp-tab-2" aria-controls="exp-panel-2">Suffolk County IT</button>
+                            <button role="tab" aria-selected="false" id="exp-tab-3" aria-controls="exp-panel-3">Best Buy</button>
+                        </div>
+
+                        <!-- RIGHT: details -->
+                        <div class="exp-detail">
+                            <section id="exp-panel-1" role="tabpanel" aria-labelledby="exp-tab-1" data-active="true">
+                            <div class="exp-role">Lead Software & Machine Learning Engineer @ <a href="https://www.stonybrook.edu/commcms/est-original/dtsResearch/automotive-ethics/" target="_blank">Automotive Ethics</a></div>
+                            <div class="exp-meta">August 2024 — Present</div>
+                            <ul class="exp-bullets">
+                                <li>Led a team of 7+ researchers in the development and training of machine learning models using PyTorch/TensorFlow to research the ethical decision-making processes of autonomous vehicles facing moral edge-case.</li>
+                                <li>Spearheaded the transition from hardware prototypes to a scalable simulation system using CARLA and Unreal Engine 5 in high-performance computing environments, generating synthetic training data for learning models.</li>
+                                <li>Accelerated the project’s delivery time by 200% by coordinating multidisciplinary groups to align AI models with applied ethical framework through the implementation of agile methodologies, such as a ticket system.</li>
+                            </ul>
+                            </section>
+
+                            <section id="exp-panel-2" role="tabpanel" aria-labelledby="exp-tab-2">
+                            <div class="exp-role">Software & Web Development Intern @ <a href="https://www.suffolkcountyny.gov/" target="_blank">Suffolk County IT Department</a></div>
+                            <div class="exp-meta">June 2025 — July 2025</div>
+                            <ul class="exp-bullets">
+                                <li>Designed and developed 3 websites using HTML, CSS, and JavaScript for distinct county initiatives; maintained and updated 50+ web pages via the content management system to enhance usability and keep content up-to-date.</li>
+                                <li>Collaborated on the implementation and testing of AI-powered tools such as a chatbot intended for integration into the county’s official website; evaluated the chatbot’s responsiveness to follow-up queries and refined key performance parameters to improve user comprehension and interaction by 50%.</li>
+                                <li>Executed cross-server QA testing to ensure site consistency and performance across testing and production environments.</li>
+                            </ul>
+                            </section>
+
+                            <section id="exp-panel-3" role="tabpanel" aria-labelledby="exp-tab-3">
+                            <div class="exp-role">Host/Product Flow Specialist @ <a href="https://www.bestbuy.com/" target="_blank">Best Buy</a></div>
+                            <div class="exp-meta">July 2024 — Present</div>
+                            <ul class="exp-bullets">
+                                <li>Managed front-of-store guest flow as Best Buy Host; greeted and triaged ~150+ customers/day, directed traffic to sales/Geek Squad, coordinated order pickup & returns, and reduced wait times by ~20% through efficient queueing and clear communication.</li>
+                                <li> Optimized the sales floor through systematic down-stocking practices including efficient product placement and the use of planograms to enhance merchandising.</li>
+                                <li>Handled inbound and outbound logistics by processing incoming shipments, facilitating timely inventory replenishment, and assembling orders for distribution.</li>
+                                <li>Fulfilled product orders within 30 minutes of request, staged items for efficient retrieval, and dispatched orders directly to customers or through third-party providers.</li>
+                            </ul>
+                            </section>
+                        </div>
+                </div>
+                
             </div>
             
             <div class="section" id="projects">
-                <h4>Projects</h4>
-                <h5>Personal Portfolio Website</h5>
+                <h3>Projects</h3>
+                <h4>Personal Portfolio Website</h4>
                 <p>Created a personal portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills. The website is responsive and features a modern design.</p>
             </div>
 
             <div class="section" id="contact">
-                <h4>Contact Me</h4>
+                <h3>Contact Me</h3>
                 <p>If you'd like to get in touch, feel free to reach out via email at _ </p>
             </div>
 

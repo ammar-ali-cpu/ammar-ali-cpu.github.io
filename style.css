@@ -241,21 +241,41 @@ h2{
     border-radius: 1px;
 }
 
+
+
 #about {
-    margin-top: 600px;
+    margin-top: 400px;
+    padding-top: 100px;
     
 }
 
 #experience {
-    margin-top: 600px;
+    margin-top: 400px;
+    padding-top: 100px;
+    display:block;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
 }
 
+#experience {
+  /* --exp-bg: #0f1720; */
+  /* --exp-panel: #121a24; */
+  --exp-text: #cbd5e1;
+  --exp-muted: #8091a7;
+  --exp-accent: #0a84ff;
+  /* --exp-divider: #223042; */
+  color: var(--exp-text);
+}
+
+
 #projects {
-    margin-top: 600px;
+    margin-top: 400px;
+    padding-top: 100px;
 }
 
 #contact {
-    margin-top: 600px;
+    margin-top: 400px;
+    padding-top: 100px;
 }
 
 /* Layout */
@@ -338,6 +358,60 @@ h2{
   box-shadow: var(--shadow-hover);
 }
 
+#experience .exp-title{
+  margin: 0 0 16px;
+  display:block;              /* avoid accidental grid/flex participation */
+  padding-bottom: 20px;
+}
+
+#experience .exp-grid{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap: 28px;
+}
+
+#experience .exp-tabs{
+  position:relative; padding: 12px 0; border-left: 2px solid var(--exp-divider);
+}
+#experience .exp-rail{
+  position:absolute; left:-2px; top:0; width:2px; height:100%;
+}
+#experience .exp-indicator{
+  position:absolute; left:0; width:2px; height:40px;
+  background: var(--exp-accent); border-radius: 2px;
+  transform: translateY(0);
+  transition: transform .25s ease, height .25s ease;
+}
+
+#experience .exp-tabs button{
+  all:unset; display:block; width:100%;
+  padding: 10px 16px 10px 18px; line-height:1.2; cursor:pointer;
+  color: var(--exp-muted);
+}
+#experience .exp-tabs button:hover,
+#experience .exp-tabs button:focus-visible{ color: var(--exp-text); }
+#experience .exp-tabs button[aria-selected="true"]{
+  color: var(--exp-accent); font-weight:600;
+}
+
+/* detail panel */
+#experience .exp-detail{
+  background: var(--exp-panel);
+  border: 1px solid var(--exp-divider);
+  border-radius: 12px;
+  padding: 22px 24px;
+}
+#experience .exp-role{ font-size: 20px; font-weight:700; }
+#experience .exp-role a{ color: var(--exp-accent); text-decoration:none; }
+#experience .exp-meta{ color: var(--exp-muted); margin: 6px 0 18px; font-size: 14px; }
+#experience .exp-bullets{ list-style:none; padding:0; margin:0; display:grid; gap:12px; }
+#experience .exp-bullets li{ display:flex; gap:12px; }
+#experience .exp-bullets li::before{ content:"▸"; color: var(--exp-accent); margin-top:-1px; }
+
+/* show only active panel */
+#experience [role="tabpanel"]{ display:none; }
+#experience [role="tabpanel"][data-active="true"]{ display:block; }
+
 
 
 
@@ -402,6 +476,21 @@ h2{
         max-width: 36ch;       /* optional: nicer measure on small screens */
     }
     :root{ --size: 300px; }
+
+    #experience .exp-grid{
+        grid-template-columns: 240px 1fr;   /* keep two columns even on small screens */
+    }
+    #experience .exp-tabs{
+        display:block;                       /* vertical list, not horizontal strip */
+        overflow:visible;
+        border-left: 2px solid var(--exp-divider);
+        padding:12px 0;
+    }
+    #experience .exp-rail{ display:block; }
+    #experience .exp-tabs button{
+        border-bottom:none;
+        white-space:normal;
+    }
 }
 
 

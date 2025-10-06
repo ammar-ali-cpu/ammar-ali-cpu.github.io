@@ -87,3 +87,46 @@ window.addEventListener('scroll', function() {
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
     drawer.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
   })();
+
+
+
+  // For experience tabs
+  (function(){
+  const root = document.querySelector('#experience');
+  if (!root) return;
+  const tabs = Array.from(root.querySelectorAll('[role="tab"]'));
+  const panels = Array.from(root.querySelectorAll('[role="tabpanel"]'));
+  const indicator = root.querySelector('#exp-indicator');
+
+  function activate(tab){
+    tabs.forEach(t => t.setAttribute('aria-selected', String(t === tab)));
+    panels.forEach(p => p.dataset.active = (p.id === tab.getAttribute('aria-controls')));
+
+    // move the indicator (desktop layout only)
+    if (indicator && window.getComputedStyle(indicator).display !== 'none') {
+      const rect = tab.getBoundingClientRect();
+      const parentTop = tab.parentElement.getBoundingClientRect().top;
+      indicator.style.height = rect.height + 'px';
+      indicator.style.transform = `translateY(${rect.top - parentTop}px)`;
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activate(tab));
+    tab.addEventListener('keydown', e => {
+      const i = tabs.indexOf(tab);
+      if (e.key === 'ArrowDown'){ e.preventDefault(); tabs[(i+1)%tabs.length].focus(); }
+      if (e.key === 'ArrowUp'){ e.preventDefault(); tabs[(i-1+tabs.length)%tabs.length].focus(); }
+      if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); activate(tab); }
+    });
+  });
+
+  window.addEventListener('load', () => {
+    const current = tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0];
+    if (current) activate(current);
+  });
+  window.addEventListener('resize', () => {
+    const current = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+    if (current) activate(current);
+  });
+})();
