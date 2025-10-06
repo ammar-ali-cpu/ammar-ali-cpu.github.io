@@ -413,6 +413,13 @@ h2{
 #experience [role="tabpanel"][data-active="true"]{ display:block; }
 
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    display: flex;
+}
+
 
 
 
@@ -477,20 +484,33 @@ h2{
     }
     :root{ --size: 300px; }
 
-    #experience .exp-grid{
-        grid-template-columns: 240px 1fr;   /* keep two columns even on small screens */
-    }
-    #experience .exp-tabs{
-        display:block;                       /* vertical list, not horizontal strip */
-        overflow:visible;
-        border-left: 2px solid var(--exp-divider);
-        padding:12px 0;
-    }
-    #experience .exp-rail{ display:block; }
-    #experience .exp-tabs button{
-        border-bottom:none;
-        white-space:normal;
-    }
+  #experience .exp-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* slightly smaller gap for mobile */
+  }
+
+  #experience .exp-tabs {
+    border-left: none;           /* remove side border */
+    border-bottom: 2px solid var(--exp-divider); /* optional horizontal divider */
+    padding-bottom: 10px;
+  }
+
+  #experience .exp-rail,
+  #experience .exp-indicator {
+    display: none; /* hide vertical indicator line */
+  }
+
+  #experience .exp-tabs button {
+    display: inline-block;        /* horizontal list for mobile, optional */
+    padding: 8px 12px;
+    border-bottom: none;
+  }
+
+  /* Optional: make role panel a bit tighter */
+  #experience .exp-detail {
+    padding: 18px;
+  }
 }
 
 
