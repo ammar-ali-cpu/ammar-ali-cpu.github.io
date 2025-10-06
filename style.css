@@ -241,6 +241,11 @@ h2{
     border-radius: 1px;
 }
 
+#tagline{
+    margin-top: 20px;
+    /* font-size: 20px; */
+    line-height: 1.5;
+}
 
 
 #about {
@@ -347,6 +352,10 @@ h2{
   /* slight counter-shift to emphasize the peek (optional) */
   transform: translate(2px, 2px);
   transition: transform 220ms ease, filter 220ms ease, box-shadow 220ms ease;
+}
+
+.about-text{
+  line-height: 1.5;
 }
 
 /* Hover: background shifts up-left, photo shifts down-right + slight tint */
@@ -510,6 +519,22 @@ h2{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns */
+  gap: 10px 20px; /* row gap, column gap */
+  list-style: disclosure-closed inside;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+.skills-list li {
+  line-height: 1;
+}
+
 
 
 
