@@ -130,3 +130,21 @@ window.addEventListener('scroll', function() {
     if (current) activate(current);
   });
 })();
+
+
+
+// Contact box
+const sendBtn = document.getElementById("sendBtn");
+
+sendBtn.addEventListener("click", () => {
+  const name = document.getElementById("fullName").value.trim();
+  const msg = document.getElementById("message").value.trim();
+
+  if (!name || !msg) {
+    alert("Please enter both your name and a message.");
+    return;
+  }
+
+  // Option 1: Using mailto
+  window.location.href = `mailto:yourname@example.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
+  });
