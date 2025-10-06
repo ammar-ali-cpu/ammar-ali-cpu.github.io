@@ -148,3 +148,22 @@ sendBtn.addEventListener("click", () => {
   // Option 1: Using mailto
   window.location.href = `mailto:yourname@example.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
   });
+
+
+
+//sections transition in
+const sections = document.querySelectorAll('.section');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // optional: animate only once
+      }
+    });
+  },
+  { threshold: 0.2 } // trigger when 20% of section is visible
+);
+
+sections.forEach(section => observer.observe(section));
