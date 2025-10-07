@@ -167,3 +167,45 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach(section => observer.observe(section));
+
+
+//for photo archive
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("photoModal");
+  const openGallery = document.getElementById("openGallery");
+  const closeBtn = document.querySelector(".close");
+  const slides = document.querySelectorAll(".slide");
+  let slideIndex = 0;
+
+  if (!modal || !openGallery || !closeBtn) return;
+
+  openGallery.addEventListener("click", (e) => {
+    e.preventDefault(); // prevent link reload
+    modal.style.display = "flex";
+    showSlide(slideIndex);
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
+  document.querySelector(".next").addEventListener("click", () => changeSlide(1));
+
+  function changeSlide(n) {
+    slideIndex += n;
+    showSlide(slideIndex);
+  }
+
+  function showSlide(n) {
+    if (n >= slides.length) slideIndex = 0;
+    if (n < 0) slideIndex = slides.length - 1;
+    slides.forEach(s => (s.style.display = "none"));
+    slides[slideIndex].style.display = "block";
+  }
+
+  // Close modal if background clicked
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+});
