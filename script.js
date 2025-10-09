@@ -146,7 +146,7 @@ sendBtn.addEventListener("click", () => {
   }
 
   // Option 1: Using mailto
-  window.location.href = `mailto:yourname@example.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
+  window.location.href = `mailto:ammaralinyc@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg)}`;
   });
 
 
