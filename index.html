@@ -147,12 +147,28 @@
                         <span class="sc-label">JavaScript</span>
                     </a>
 
+                    <a class="sc-card" role="listitem" href="#." aria-label="TypeScript">
+                        <span class="sc-logo">
+                        <img alt="TypeScript logo"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/250px-Typescript_logo_2020.svg.png" />
+                        </span>
+                        <span class="sc-label">TypeScript</span>
+                    </a>
+
                     <a class="sc-card" role="listitem" href="#." aria-label="OCaml">
                         <span class="sc-logo">
                             <img alt="OCaml logo"
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQplFTqdcEg-iy37fakXoQgwqwM5rNy0E2h2w&s" />
                         </span>
                         <span class="sc-label">OCaml</span>
+                    </a>
+
+                    <a class="sc-card" role="listitem" href="#." aria-label="C++">
+                        <span class="sc-logo">
+                            <img alt="C++ logo"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1920px-ISO_C%2B%2B_Logo.svg.png" />
+                        </span>
+                        <span class="sc-label">C++</span>
                     </a>
 
                     <a class="sc-card" role="listitem" href="#." aria-label="SQL">
@@ -251,6 +267,36 @@
                     </a>
                     </div>
                 </div>
+
+                <div class="sc-group sc-panel">
+                    <h3>Cloud &amp; Deployment</h3>
+                    <div class="sc-grid" role="list">
+                    <a class="sc-card" role="listitem" href="#." aria-label="AWS App Runner">
+                        <span class="sc-logo">
+                        <img alt="AWS App Runner logo"
+                            src="https://newrelic.com/sites/default/files/styles/medium/public/quickstarts/images/icons/aws-apprunner--logo.png?itok=7vtSkACL" />
+                        </span>
+                        <span class="sc-label">AWS App Runner</span>
+                    </a>
+
+
+                    <a class="sc-card" role="listitem" href="#." aria-label="AWS S3">
+                        <span class="sc-logo">
+                        <img alt="AWS S3 logo"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Amazon-S3-Logo.svg/960px-Amazon-S3-Logo.svg.png" />
+                        </span>
+                        <span class="sc-label">AWS S3</span>
+                    </a>
+
+                    <a class="sc-card" role="listitem" href="#." aria-label="Docker">
+                        <span class="sc-logo">
+                            <img alt="Docker logo"
+                            src="https://brandlogos.net/wp-content/uploads/2025/10/docker_mark-logo_brandlogos.net_yetav.png" />
+                        </span>
+                        <span class="sc-label">Docker</span>
+                    </a>
+
+                </div>
             </section>
 
             <div class="section" id="experience">
@@ -268,9 +314,9 @@
                             <div class="exp-role">Lead Software & Machine Learning Engineer @ <a href="https://www.stonybrook.edu/commcms/est-original/dtsResearch/automotive-ethics/" target="_blank">Automotive Ethics</a></div>
                             <div class="exp-meta">August 2024 — Present</div>
                             <ul class="exp-bullets">
-                                <li>Led a team of 7+ researchers in the development and training of machine learning models using PyTorch/TensorFlow to research the ethical decision-making processes of autonomous vehicles facing moral edge-case.</li>
-                                <li>Spearheaded the transition from hardware prototypes to a scalable simulation system using CARLA and Unreal Engine 5 in high-performance computing environments, generating synthetic training data for learning models.</li>
-                                <li>Accelerated the project’s delivery time by 200% by coordinating multidisciplinary groups to align AI models with applied ethical framework through the implementation of agile methodologies, such as a ticket system.</li>
+                                <li>Architected an RLHF system for ethical autonomous vehicle decision-making using PyTorch (policy/value/reward networks, 12K+ parameters), achieving human-aligned behavior via Bradley-Terry preference learning from 100+ labeled trajectories.</li>
+                                <li>Led ML team of 7+ through full-cycle development: PPO, GAE, preference pipeline, and integration of Utilitarian/Kantian/Virtue ethical theories with learned rewards; delivered production API for CARLA simulator.</li>
+                                <li>Pivoted project from hardware to scalable ML/simulation, cutting delivery time by 200%; presented at symposiums and submitted conference abstracts; preparing publication for AI ethics venues.</li>
                             </ul>
                             </section>
 
@@ -302,6 +348,21 @@
             <div class="section" id="projects">
                 <h3>Projects</h3>
                 <div class="project-grid">
+                    <a class="project-item" href="http://amethyst-web-prod.s3-website-us-east-1.amazonaws.com/" target="_blank">
+                        <h4>Draftroom Fantasy Baseball Platform</h4>
+                        <p>A full-stack draft assistant platform and licensable REST API delivering real-time recommendations, featuring live MLB data integration, auction tracking, and AI-assisted decision support, with secure authentication and cloud deployment.</p>
+                        <p class="tech-stack">TypeScript, React, Node.js, Express.js, MongoDB, AWS, Socket.io</p>
+                    </a>
+                    <a class="project-item" href="https://github.com/Automotive-Ethics-Labs-VIP/Ethical_Head" target="_blank">
+                        <h4>Ethical Autonomous Driving RLHF ML Model</h4>
+                        <p>A reinforcement learning from human feedback (RLHF) system for autonomous vehicle decision-making, using preference learning and PPO to produce human-aligned behavior in simulated driving environments.</p>
+                        <p class="tech-stack">Python, PyTorch, Reinforcement Learning (PPO, GAE), Neural Networks, RLHF, CARLA Simulator</p>
+                    </a>
+                    <a class="project-item" href="https://continethesurah.web.app/" target="_blank">
+                        <h4>Continue the Surah</h4>
+                        <p>A browser-based educational game designed to aid Quran memorization (hifz) by prompting users with a random ayah and requiring them to correctly recite the following verse from memory using real-time speech recognition.</p>
+                        <p class="tech-stack">HTML/CSS, JavaScript, React, Web Speech API, Firebase Hosting</p>
+                    </a>
                     <a class="project-item" href="https://github.com/ammar-ali-cpu/Phreddit" target="_blank">
                         <h4>Phreddit Social Media Platform</h4>
                         <p>A full-stack web application replicating Reddit’s core features including the creation of posts, communities, and comments, as well as user authentication, and search results.</p>
@@ -311,11 +372,6 @@
                         <h4>Self-driving Car Image Recognition</h4>
                         <p>A KNN based machine learning model used to detect and categorize common obstacles a self-driving vehicle may encounter on the road, such as pedestrians, cyclists, motorcycles, trucks, or other cars.</p>
                         <p class="tech-stack">Python, Scikit-learn, Numpy, Git</p>
-                    </a>
-                    <a class="project-item" href="https://continethesurah.web.app/" target="_blank">
-                        <h4>Continue the Surah</h4>
-                        <p>A browser-based educational game designed to aid Quran memorization (hifz) by prompting users with a random ayah and requiring them to correctly recite the following verse from memory using real-time speech recognition.</p>
-                        <p class="tech-stack">HTML/CSS, JavaScript, React, Web Speech API, Firebase Hosting</p>
                     </a>
                     <a class="project-item" href="https://github.com/ammar-ali-cpu/Image_Compression" target="_blank">
                         <h4>Steganographic Image Compression</h4>
