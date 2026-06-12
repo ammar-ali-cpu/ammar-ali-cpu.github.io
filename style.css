@@ -648,6 +648,130 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ======================================================
+   PROJECTS CAROUSEL
+   ====================================================== */
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  min-width: 0;
+  padding: 8px 0;
+  margin: -8px 0;
+}
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  align-items: stretch;
+}
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  font-size: 14px;
+}
+.carousel-arrow:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+.carousel-arrow:disabled { opacity: 0.3; cursor: not-allowed; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+.carousel-dot.active {
+  background: var(--accent);
+  transform: scale(1.5);
+}
+.pc {
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+.pc:hover {
+  border-color: rgba(79,142,247,0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(79,142,247,0.08);
+}
+.pc-header {
+  background: var(--hgrad);
+  padding: 22px 20px 18px;
+  position: relative;
+  overflow: hidden;
+  min-height: 148px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pc-bg-icon {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  font-size: 80px;
+  color: rgba(255,255,255,0.07);
+  pointer-events: none;
+  line-height: 1;
+}
+.pc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pc-header h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 14px;
+  line-height: 1.35;
+}
+.pc-body {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.pc-body p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* ======================================================
    CONTACT
    ====================================================== */
 .contact-intro {

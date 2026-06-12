@@ -224,133 +224,151 @@
         <div class="section-line"></div>
       </div>
 
-      <div class="project-grid">
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow" id="carouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carouselTrack">
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-live">Live · 50+ users</span>
-            <div class="project-links">
-              <a href="https://draftroom.uk" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#1a3f6e,#0a1f3a)">
+                <i class="fas fa-trophy pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-live">Live · 50+ users</span>
+                  <div class="project-links"><a href="https://draftroom.uk" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a></div>
+                </div>
+                <h4>Draftroom Fantasy Baseball</h4>
+              </div>
+              <div class="pc-body">
+                <p>Full-stack fantasy baseball draft assistant with AI mock draft simulator. Features a publicly documented REST API with real-time MLB data, auction tracking, and secure authentication.</p>
+                <div class="project-tags"><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">AWS</span><span class="tag">Socket.io</span><span class="tag">Docker</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Draftroom Fantasy Baseball Platform</h4>
-          <p>Full-stack fantasy baseball draft assistant with AI mock draft simulator. Features a publicly documented REST API (Amethyst API) with real-time MLB data integration, auction tracking, and secure authentication.</p>
-          <div class="project-tags">
-            <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">AWS</span><span class="tag">Socket.io</span><span class="tag">Docker</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-dev">In Development</span>
-            <div class="project-links"></div>
-          </div>
-          <h4>ReminisceAI</h4>
-          <p>AI startup platform for dementia reminiscence therapy. Uses Claude API for personalized narrative generation and Flux Dev LoRA for synthesizing custom memory-evocative images from patient history.</p>
-          <div class="project-tags">
-            <span class="tag">Claude API</span><span class="tag">Flux LoRA</span><span class="tag">Replicate</span><span class="tag">AWS S3</span><span class="tag">MongoDB</span><span class="tag">TypeScript</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/ammar-ali-cpu/Bourse-Exchange-Server" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#3d1a5c,#1e0d2e)">
+                <i class="fas fa-brain pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-dev">In Development</span>
+                  <div class="project-links"></div>
+                </div>
+                <h4>ReminisceAI</h4>
+              </div>
+              <div class="pc-body">
+                <p>AI startup platform for dementia reminiscence therapy. Uses Claude API for personalized narrative generation and Flux Dev LoRA for synthesizing memory-evocative images from patient history.</p>
+                <div class="project-tags"><span class="tag">Claude API</span><span class="tag">Flux LoRA</span><span class="tag">Replicate</span><span class="tag">AWS S3</span><span class="tag">MongoDB</span><span class="tag">TypeScript</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Bourse Exchange Server</h4>
-          <p>Concurrent stock exchange server implementing a custom binary TCP protocol with POSIX threads and mutex synchronization for high-throughput order matching.</p>
-          <div class="project-tags">
-            <span class="tag">C</span><span class="tag">POSIX Threads</span><span class="tag">Sockets</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/Automotive-Ethics-Labs-VIP/Ethical_Head" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#4a3010,#221508)">
+                <i class="fas fa-chart-line pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/ammar-ali-cpu/Bourse-Exchange-Server" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>Bourse Exchange Server</h4>
+              </div>
+              <div class="pc-body">
+                <p>Concurrent stock exchange server implementing a custom binary TCP protocol with POSIX threads and mutex synchronization for high-throughput order matching.</p>
+                <div class="project-tags"><span class="tag">C</span><span class="tag">POSIX Threads</span><span class="tag">Sockets</span></div>
+              </div>
             </div>
-          </div>
-          <h4>RLHF Ethical Decision-Making</h4>
-          <p>ML model encoding Kantian and Utilitarian ethics for autonomous vehicle decision-making, achieving 100% Kantian accuracy on 200 labeled trajectories via PPO + Bradley-Terry preference learning.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RLHF</span><span class="tag">PPO</span><span class="tag">CARLA</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/ammar-ali-cpu/news-headline-classifier" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#1a4a30,#0d2218)">
+                <i class="fas fa-car pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/Automotive-Ethics-Labs-VIP/Ethical_Head" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>RLHF Ethical Decision-Making</h4>
+              </div>
+              <div class="pc-body">
+                <p>ML model encoding Kantian and Utilitarian ethics for autonomous vehicle decision-making, achieving 100% Kantian accuracy on 200 labeled trajectories via PPO + Bradley-Terry preference learning.</p>
+                <div class="project-tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">RLHF</span><span class="tag">PPO</span><span class="tag">CARLA</span></div>
+              </div>
             </div>
-          </div>
-          <h4>News Headline Classifier</h4>
-          <p>Logistic regression from scratch (91.5% accuracy), K-means clustering from scratch, and few-shot Qwen2.5 LLM classification (69.5%) for news headline topic detection.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Scikit-learn</span><span class="tag">HuggingFace</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/ammar-ali-cpu/Image_Compression" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#104a4a,#062222)">
+                <i class="fas fa-newspaper pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/ammar-ali-cpu/news-headline-classifier" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>News Headline Classifier</h4>
+              </div>
+              <div class="pc-body">
+                <p>Logistic regression from scratch (91.5% accuracy), K-means clustering, and few-shot Qwen2.5 LLM classification (69.5%) for news headline topic detection.</p>
+                <div class="project-tags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Scikit-learn</span><span class="tag">HuggingFace</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Image Compression &amp; Steganography</h4>
-          <p>Recursive quadtree-based image compression with LSB steganography for encrypting and decrypting hidden messages or images within a carrier image.</p>
-          <div class="project-tags">
-            <span class="tag">C</span><span class="tag">Git</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-live">Live</span>
-            <div class="project-links">
-              <a href="https://continethesurah.web.app/" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#4a2010,#220e08)">
+                <i class="fas fa-image pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/ammar-ali-cpu/Image_Compression" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>Image Compression &amp; Steganography</h4>
+              </div>
+              <div class="pc-body">
+                <p>Recursive quadtree-based image compression with LSB steganography for encrypting and decrypting hidden messages or images within a carrier image.</p>
+                <div class="project-tags"><span class="tag">C</span><span class="tag">Git</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Continue the Surah</h4>
-          <p>Browser-based Quran memorization game that prompts users with a random ayah and validates their recitation of the next verse using real-time Web Speech API recognition.</p>
-          <div class="project-tags">
-            <span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Web Speech API</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/ammar-ali-cpu/household-energy-analysis" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#1a4a1a,#0d220d)">
+                <i class="fas fa-book-open pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-live">Live</span>
+                  <div class="project-links"><a href="https://continethesurah.web.app/" target="_blank" rel="noopener" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a></div>
+                </div>
+                <h4>Continue the Surah</h4>
+              </div>
+              <div class="pc-body">
+                <p>Browser-based Quran memorization game that prompts users with a random ayah and validates their recitation of the next verse using real-time Web Speech API recognition.</p>
+                <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Firebase</span><span class="tag">Web Speech API</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Household Energy Analysis</h4>
-          <p>Weather-driven household electricity usage prediction pipeline — RMSE 7.71 kW, F1 0.82 — with behavioral pattern analysis and anomaly detection.</p>
-          <div class="project-tags">
-            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-badge badge-gh">GitHub</span>
-            <div class="project-links">
-              <a href="https://github.com/ammar-ali-cpu/Phreddit" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#4a4010,#22200a)">
+                <i class="fas fa-bolt pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/ammar-ali-cpu/household-energy-analysis" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>Household Energy Analysis</h4>
+              </div>
+              <div class="pc-body">
+                <p>Weather-driven household electricity usage prediction pipeline — RMSE 7.71 kW, F1 0.82 — with behavioral pattern analysis and anomaly detection.</p>
+                <div class="project-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span></div>
+              </div>
             </div>
-          </div>
-          <h4>Phreddit</h4>
-          <p>Full-stack Reddit clone with communities, posts, comments, user authentication, and search — built end-to-end with the MERN stack.</p>
-          <div class="project-tags">
-            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">JavaScript</span>
+
+            <div class="pc">
+              <div class="pc-header" style="--hgrad: linear-gradient(135deg,#4a2510,#221208)">
+                <i class="fas fa-comments pc-bg-icon"></i>
+                <div class="pc-top">
+                  <span class="project-badge badge-gh">GitHub</span>
+                  <div class="project-links"><a href="https://github.com/ammar-ali-cpu/Phreddit" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a></div>
+                </div>
+                <h4>Phreddit</h4>
+              </div>
+              <div class="pc-body">
+                <p>Full-stack Reddit clone with communities, posts, comments, user authentication, and search — built end-to-end with the MERN stack.</p>
+                <div class="project-tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span><span class="tag">JavaScript</span></div>
+              </div>
+            </div>
+
           </div>
         </div>
-
+        <button class="carousel-arrow" id="carouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
       </div>
+      <div class="carousel-dots" id="carouselDots"></div>
     </div>
   </section>
 

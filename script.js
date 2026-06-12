@@ -225,6 +225,61 @@ fadeSections.forEach(s => {
 })();
 
 /* ======================================================
+   PROJECTS CAROUSEL
+   ====================================================== */
+(function () {
+  const track    = document.getElementById('carouselTrack');
+  const viewport = track.parentElement;
+  const prevBtn  = document.getElementById('carouselPrev');
+  const nextBtn  = document.getElementById('carouselNext');
+  const dotsEl   = document.getElementById('carouselDots');
+  const cards    = Array.from(track.children);
+  const GAP      = 20;
+  let page       = 0;
+
+  function cpp() {
+    return window.innerWidth < 640 ? 1 : window.innerWidth < 960 ? 2 : 3;
+  }
+  function pageCount() { return Math.ceil(cards.length / cpp()); }
+  function cardW()     { return (viewport.offsetWidth - GAP * (cpp() - 1)) / cpp(); }
+
+  function layout() {
+    const w = cardW();
+    cards.forEach(c => { c.style.width = w + 'px'; });
+  }
+
+  function goTo(p) {
+    const pc = pageCount();
+    page = Math.max(0, Math.min(p, pc - 1));
+    const w  = cardW();
+    track.style.transform = `translateX(-${page * cpp() * (w + GAP)}px)`;
+    prevBtn.disabled = page === 0;
+    nextBtn.disabled = page === pc - 1;
+    Array.from(dotsEl.children).forEach((d, i) => d.classList.toggle('active', i === page));
+  }
+
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    for (let i = 0; i < pageCount(); i++) {
+      const d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', `Page ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+    }
+  }
+
+  prevBtn.addEventListener('click', () => goTo(page - 1));
+  nextBtn.addEventListener('click', () => goTo(page + 1));
+
+  window.addEventListener('resize', () => { layout(); buildDots(); goTo(0); });
+
+  layout();
+  buildDots();
+  goTo(0);
+})();
+
+/* ======================================================
    CONTACT FORM → MAILTO
    ====================================================== */
 document.getElementById('contactForm').addEventListener('submit', e => {
